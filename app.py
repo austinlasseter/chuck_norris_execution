@@ -8,6 +8,7 @@ import os
 list_of_choices=['punch', 'body-slam', 'round-house kick to the face']
 githublink = 'https://github.com/austinlasseter/chuck_norris_execution'
 image1='chucknorris.jpg'
+heading1='Chuck Norris execution method'
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -17,7 +18,7 @@ app.title='Chuck'
 
 ####### Layout of the app ########
 app.layout = html.Div([
-    html.H2('Chuck Norris execution method'),
+    html.H2(heading1),
     html.Img(src=app.get_asset_url(image1), style={'width': 'auto', 'height': '10%'}),
     dcc.Dropdown(id='your-input-here',
                 options=[{'label': i, 'value': i} for i in list_of_choices],
